@@ -188,3 +188,15 @@ button:hover {
 #main-site.hidden {
     display: none !important;
 }
+#enter-screen.hidden {
+    display: none !important;
+}
+
+#main-site.hidden {
+    display: none !important;
+}
+
+#main-site {
+    width: 100%;
+    min-height: 100vh;
+}
