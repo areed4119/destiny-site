@@ -6,47 +6,74 @@
 </head>
 <body>
 
-    <div class="card">
-        <p class="tag">DESTINY-INSPIRED PERSONAL ARCHIVE</p>
+    <div class="stars"></div>
 
-        <h1>TRANSMISSION RECEIVED</h1>
+    <nav class="navbar">
+        <a href="index.html">Orbit</a>
+        <a href="lore.html">Lore Archive</a>
+        <a href="guardian.html">Guardian Profile</a>
+        <a href="terminal.html">Terminal</a>
+    </nav>
 
-        <p class="subtitle">To: Jowaaaa</p>
+    <div id="enter-screen">
+        <p id="statusText"></p>
 
-        <p>
-            I may not play Destiny 2, but I know it is your favorite game.
-            So I wanted to make something special, just for you.
-        </p>
+        <h1>DESTINATION LOCKED</h1>
 
-        <div class="section">
-            <h2>Origin Story</h2>
+        <p>Personal transmission waiting in orbit...</p>
+
+        <button onclick="enterOrbit()">Enter Orbit</button>
+    </div>
+
+    <div id="main-site" class="hidden">
+        <div class="card">
+            <p class="tag">DESTINY-INSPIRED PERSONAL ARCHIVE</p>
+
+            <h1>TRANSMISSION RECEIVED</h1>
+
+            <p class="subtitle">To: My Favorite Guardian</p>
+
             <p>
-                We started talking through Twitch and Discord, and somehow
-                you became someone I really look forward to talking to.
+                I may not play Destiny 2, but I know it is your favorite game.
+                So I wanted to make something special, just for you BigDog.
             </p>
-        </div>
 
-        <div class="section">
-            <h2>Mission Objective</h2>
             <div class="section">
-    <h2>Fireteam Records</h2>
+                <h2>Origin Story</h2>
+                <p>
+                    We started talking because of RL and then somehow
+                    you became someone I really look forward to talking to.
+                </p>
+            </div>
 
-    <ul>
-        <li>First Twitch conversation</li>
-        <li>Discord chaos</li>
-        <li>Inside joke #1</li>
-        <li>Favorite memory</li>
-    </ul>
-</div>
-            <p>
-                Make you smile, remind you that you are appreciated,
-                and create something that feels like it belongs in your world.
-            </p>
+            <div class="section">
+                <h2>Mission Objective</h2>
+                <p>
+                    Make you smile, remind you that you are appreciated,
+                    and create something that feels like it belongs in your world.
+                </p>
+            </div>
+
+            <div class="section ghost-box">
+                <h2>Ghost Companion</h2>
+
+                <div id="ghostChat">
+                    <p class="ghost-message">
+                        Ghost: Guardian detected. Personal archive is online.
+                    </p>
+                </div>
+
+                <button onclick="ghostTalk()">Ask Ghost</button>
+            </div>
+
+            <button onclick="showMessage()">Open Final Transmission</button>
+
+            <p id="secret-message"></p>
+
+            <button class="small-button" onclick="easterEgg()">Classified File</button>
+
+            <p id="easter-egg"></p>
         </div>
-
-        <button onclick="showMessage()">Open Final Transmission</button>
-
-        <p id="secret-message"></p>
     </div>
 
     <script src="script.js"></script>

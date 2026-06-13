@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guardian Terminal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="stars"></div>
+
+    <nav class="navbar">
+        <a href="index.html">Orbit</a>
+        <a href="lore.html">Lore Archive</a>
+        <a href="guardian.html">Guardian Profile</a>
+        <a href="terminal.html">Terminal</a>
+    </nav>
+
+    <div class="card">
+        <p class="tag">GUARDIAN TERMINAL</p>
+        <h1>CLASSIFIED ACCESS</h1>
+
+        <div class="section">
+            <input
+                type="text"
+                id="codeInput"
+                placeholder="Enter Access Code">
+
+            <button onclick="checkCode()">Submit</button>
+
+            <p id="codeResult"></p>
+        </div>
+
+        <div id="classified-file" class="hidden">
+            <div class="section">
+                <h2>CLASSIFIED FILE</h2>
+                <p>
+                    Guardian Log #001
+                </p>
+                <p>
+                    This site was made because you made me inspired again.
+                </p>
+                <p>
+                    Thank you for every conversation, every laugh,
+                    and every picture hehehe.
+                </p>
+                <p>
+                    Access Level: Unlimited.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

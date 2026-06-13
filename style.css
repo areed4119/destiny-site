@@ -1,27 +1,59 @@
 body {
-    background-color: #0a0f1f;
-    color: white;
-    font-family: Consolas, monospace;
-    text-align: center;
-    padding-top: 100px;
-}
-
-h1 {
-    color: gold;
-}
-body {
     margin: 0;
-    height: 100vh;
-    background:
-radial-gradient(circle at 20% 20%, #3a4d80 0%, transparent 25%),
-radial-gradient(circle at 80% 30%, #2a2455 0%, transparent 20%),
-radial-gradient(circle at 50% 80%, #4a2a6a 0%, transparent 25%),
-#060914;
+    min-height: 100vh;
+    background: #060914;
     color: white;
     font-family: Consolas, monospace;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
+}
+
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-image:
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(#8f9cff 1px, transparent 1px);
+
+    background-size: 60px 60px, 100px 100px;
+
+    animation: moveStars 20s linear infinite;
+
+    opacity: 0.4;
+    z-index: -1;
+}
+
+@keyframes moveStars {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 300px 300px;
+    }
+}
+
+#enter-screen {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.hidden {
+    display: none;
 }
 
 .card {
@@ -44,26 +76,6 @@ h1 {
     font-size: 18px;
 }
 
-button {
-    background: gold;
-    color: #111;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-button:hover {
-    background: white;
-}
-
-#secret-message {
-    margin-top: 25px;
-    color: #d8d8ff;
-    font-size: 18px;
-}
 .tag {
     color: #8f9cff;
     font-size: 12px;
@@ -81,4 +93,98 @@ button:hover {
 .section h2 {
     color: gold;
     margin-bottom: 10px;
+}
+
+ul {
+    text-align: left;
+}
+
+button {
+    background: gold;
+    color: #111;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: white;
+}
+
+.small-button {
+    background: transparent;
+    color: #8f9cff;
+    border: 1px solid #8f9cff;
+    font-size: 12px;
+}
+
+#secret-message,
+#easter-egg {
+    margin-top: 25px;
+    color: #d8d8ff;
+    font-size: 18px;
+    white-space: pre-line;
+}
+.ghost-box {
+    border-color: rgba(143, 156, 255, 0.6);
+}
+
+#ghostChat {
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(143, 156, 255, 0.5);
+    border-radius: 10px;
+    padding: 15px;
+    min-height: 80px;
+    text-align: left;
+}
+
+.ghost-message {
+    color: #d8d8ff;
+    margin: 0;
+}
+.navbar {
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(10, 15, 30, 0.9);
+    border: 1px solid rgba(255, 215, 0, 0.4);
+    border-radius: 12px;
+    padding: 12px 20px;
+    z-index: 10;
+}
+
+.navbar a {
+    color: #d8d8ff;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 14px;
+}
+
+.navbar a:hover {
+    color: gold;
+}
+#statusText {
+    max-width: 600px;
+    text-align: center;
+    line-height: 1.5;
+}
+.hidden {
+    display: none !important;
+}
+#main-site {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+    box-sizing: border-box;
+}
+
+#main-site.hidden {
+    display: none !important;
 }
